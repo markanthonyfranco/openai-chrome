@@ -372,3 +372,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Existing code continues...
 });
+document.addEventListener('DOMContentLoaded', function () {
+    // Existing setup code...
+
+    const urlInput = document.getElementById('url-input');
+
+    urlInput.addEventListener('input', function() {
+        // Example: Log the current value, but you can replace this with your actual logic
+        console.log('URL entered:', this.value);
+    });
+
+    // Continue with your existing JavaScript...
+});
+
