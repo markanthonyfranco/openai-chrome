@@ -334,3 +334,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+<!-- Add this section for URL input -->
+<div class="input-group">
+    <label for="url-input">Enter URL:</label>
+    <input type="url" id="url-input" name="url-input" placeholder="https://example.com">
+</div>
