@@ -334,8 +334,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-<!-- Add this section for URL input -->
-<div class="input-group">
-    <label for="url-input">Enter URL:</label>
-    <input type="url" id="url-input" name="url-input" placeholder="https://example.com">
-</div>
+document.addEventListener('DOMContentLoaded', function () {
+    // Assuming existing variable declarations are here
+
+    // New drop box for selecting "job description"
+    const actionSelect = document.createElement('select');
+    actionSelect.innerHTML = `
+        <option value="">Select Action...</option>
+        <option value="job-description">Job Description</option>
+    `;
+    document.body.appendChild(actionSelect); // Adjust this to insert wherever you want in your page
+
+    // Text area for inputting job description
+    const jobDescriptionInput = document.createElement('textarea');
+    jobDescriptionInput.style.display = 'none'; // Initially hidden
+    document.body.appendChild(jobDescriptionInput); // Adjust this to insert wherever you want in your page
+
+    // Logic to handle selection
+    actionSelect.addEventListener('change', function() {
+        if (this.value === 'job-description') {
+            jobDescriptionInput.style.display = 'block';
+            jobDescriptionInput.focus();
+        } else {
+            jobDescriptionInput.style.display = 'none';
+        }
+    });
+
+    // Example logic to save job description - adjust based on how you're saving data
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = 'Save';
+    saveBtn.addEventListener('click', function() {
+        const jobDescription = jobDescriptionInput.value;
+        // Save the job description here, e.g., to local storage, a database, or send it to a server
+        console.log('Saving job description:', jobDescription); // Example action
+    });
+    document.body.appendChild(saveBtn); // Adjust this to insert wherever you want in your page
+
+    // Existing code continues...
+});
