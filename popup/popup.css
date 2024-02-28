@@ -253,3 +253,28 @@ a {
     border-radius: 12px;
     overflow: scroll;
 }
+/* Existing styles... */
+
+.input-group {
+    margin: 20px 0;
+    color: #FFF; /* Adjust based on your color scheme */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #FFF;
+    color: #333;
+}
+
+/* Consider adding styles for focus, hover states for better UX */
+.input-group input[type="url"]:focus {
+    border-color: #06F;
+}
